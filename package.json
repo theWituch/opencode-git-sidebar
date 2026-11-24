@@ -1,0 +1,44 @@
+{
+  "name": "@thewituch/opencode-git-sidebar",
+  "version": "0.1.0",
+  "description": "Configurable Git status and recent commits in the OpenCode TUI sidebar",
+  "license": "GPL-3.0-only",
+  "keywords": ["opencode", "opencode-plugin", "git", "git-status", "sidebar", "tui"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theWituch/opencode-git-sidebar.git"
+  },
+  "homepage": "https://github.com/theWituch/opencode-git-sidebar#readme",
+  "bugs": "https://github.com/theWituch/opencode-git-sidebar/issues",
+  "type": "module",
+  "exports": {
+    "./tui": "./src/tui.tsx"
+  },
+  "files": ["src"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node --test",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test",
+    "pack:dry": "npm pack --dry-run",
+    "prepublishOnly": "npm run check"
+  },
+  "dependencies": {
+    "@opencode/plugin": "^2.4.1"
+  },
+  "peerDependencies": {
+    "@opentui/core": ">=0.8.0 <1",
+    "@opentui/solid": ">=0.8.0 <1",
+    "solid-js": "^1.9.12"
+  },
+  "devDependencies": {
+    "@opencode/theme": "2.4.1",
+    "@opentui/core": "0.9.4",
+    "@opentui/solid": "0.9.4",
+    "@types/node": "^24.19.2",
+    "solid-js": "^1.9.12",
+    "typescript": "~5.9.3"
+  }
+}
